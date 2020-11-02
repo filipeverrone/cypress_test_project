@@ -1,6 +1,6 @@
 /// < reference types=cypress />
 
-it("Test", function () {});
+it("Test", () => {});
 
 const sum = (a, b) => a + b;
 
