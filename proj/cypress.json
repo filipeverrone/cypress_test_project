@@ -1,1 +1,5 @@
-{}
+{
+  "env": {
+    "mainUrl": "http://localhost:3000/"
+  }
+}
