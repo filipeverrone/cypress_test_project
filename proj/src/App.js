@@ -4,7 +4,9 @@ import { Formik } from "formik";
 import "./App.css";
 
 const App = () => {
-  const loginRequest = (fields) => {};
+  const loginRequest = (fields) => {
+    console.log("User logged");
+  };
   return (
     <>
       <div className="App">
@@ -28,6 +30,7 @@ const App = () => {
                     onBlur={props.handleBlur}
                     value={props.values.name}
                     name="name"
+                    placeholder="User or e-mail"
                   />
                   <input
                     type="password"
@@ -35,6 +38,7 @@ const App = () => {
                     onBlur={props.handleBlur}
                     value={props.values.password}
                     name="password"
+                    placeholder="Password"
                   />
                   <button type="submit">Submit</button>
                 </div>
