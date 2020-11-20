@@ -1,14 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import App from "./Login/App";
 import * as serviceWorker from "./serviceWorker";
-import Dashboard from "./dashboard/Dashboard";
+import { BrowserRouter } from "react-router-dom";
+import Register from "./Register/index";
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App />
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 

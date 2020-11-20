@@ -29,7 +29,7 @@ const App = () => {
                     onChange={props.handleChange}
                     onBlur={props.handleBlur}
                     value={props.values.name}
-                    name="name"
+                    id="name"
                     placeholder="User or e-mail"
                   />
                   <input
@@ -37,14 +37,25 @@ const App = () => {
                     onChange={props.handleChange}
                     onBlur={props.handleBlur}
                     value={props.values.password}
-                    name="password"
+                    id="password"
                     placeholder="Password"
                   />
-                  <button type="submit">Submit</button>
+                  <button
+                    id="button"
+                    type="submit"
+                    disabled={
+                      props.values.name === "" || props.values.password === ""
+                    }
+                  >
+                    Submit
+                  </button>
                 </div>
               </form>
             )}
           />
+          <div style={{ fontSize: "15px" }}>
+            <a href="/register">Register</a>
+          </div>
         </header>
         <div className="App-link">
           <div>
