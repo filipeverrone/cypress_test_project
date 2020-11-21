@@ -11,18 +11,21 @@ const App = () => {
     <>
       <div className="App">
         <header className="App-header">
-          <h1>Sandbox Testing</h1>
-          <p className="App-text">
+          <h1 id="title">Sandbox Testing</h1>
+          <p className="App-text" id="description">
             Welcome to the big testing web site!
             <br /> Give your application here, and at work!
           </p>
           <Formik
             initialValues={{ name: "", password: "" }}
-            onSubmit={({ fields }) => {
-              loginRequest(fields);
+            onSubmit={({ props }) => {
+              loginRequest({
+                username: props.values.name,
+                password: props.values.password,
+              });
             }}
             render={(props) => (
-              <form onSubmit={props.handleSubmit}>
+              <form onSubmit={loginRequest(props)}>
                 <div className="App-form">
                   <input
                     type="text"
